@@ -8,7 +8,7 @@ addLayer("x", {
     }},
     color: "#4BDC13",
     requires: new Decimal(10), 
-    resource: "prestige points", 
+    resource: "𝑥-Machina points", 
     baseResource: "points", 
     baseAmount() {return player.points}, 
     type: "normal", 
