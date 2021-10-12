@@ -29,6 +29,7 @@ addLayer("x", {
         11: {
             title: "Gotta start somewhere.",
             description: "Generate 1 point/s",
+            cost: new Decimal(1),
         }
     }
 })
