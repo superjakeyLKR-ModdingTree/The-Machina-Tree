@@ -63,4 +63,10 @@ addLayer("x", {
             }
         }
     }
+}),
+addLayer("ach", {
+    name: "Achievments",
+    symbol: "A",
+    color: "#6A0DAD",
+    row: "side"
 })
