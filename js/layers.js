@@ -70,22 +70,19 @@ addLayer("ach", {
     position: 0,
     startData() { return {
         unlocked: true,
-		points: new Decimal(0),
     }},
     color: "#6A0DAD",
-    row: "side",
-    requires: new Decimal(0), 
-    resource: "achievements",
+    row: "side", 
     achievements: {
         11: {
             name: "It's a start.",
             tooltip: "Get your first 𝑥-Machina point.",
-            done() {return player.x.points.gte(1)}
+            done() {return player.x.points.gte(1)},
         },
         12: {
             name: "Raking them in.",
             tooltip: "Have 5 𝑥-Machina points.",
-            done() {return player.x.points.gte(5)}
+            done() {return player.x.points.gte(5)},
         }
     }
 })
