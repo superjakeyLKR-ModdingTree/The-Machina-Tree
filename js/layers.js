@@ -67,6 +67,25 @@ addLayer("x", {
 addLayer("ach", {
     name: "Achievments",
     symbol: "A",
+    position: 0,
+    startData() { return {
+        unlocked: true,
+		points: new Decimal(0),
+    }},
     color: "#6A0DAD",
-    row: "side"
+    row: "side",
+    requires: new Decimal(0), 
+    resource: "achievements",
+    achievements: {
+        11: {
+            name: "It's a start.",
+            tooltip: "Get your first 𝑥-Machina point.",
+            done() {return player.x.points.gte(1)}
+        },
+        12: {
+            name: "Raking them in.",
+            tooltip: "Have 5 𝑥-Machina points.",
+            done() {return player.x.points.gte(5)}
+        }
+    }
 })
