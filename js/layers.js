@@ -9,7 +9,7 @@ addLayer("x", {
     color: "#4BDC13",
     requires: new Decimal(10), 
     resource: "𝑥-Machina points", 
-    baseResource: "points", 
+    baseResource: "machina points", 
     baseAmount() {return player.points}, 
     type: "normal", 
     exponent: 0.5, 
