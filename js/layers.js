@@ -28,8 +28,14 @@ addLayer("x", {
     upgrades: {
         11: {
             title: "Gotta start somewhere.",
-            description: "Generate 1 point/s",
+            description: "Generate 1 machina point/s.",
             cost: new Decimal(1),
+        },
+        12: {
+            title: "More Points.",
+            description: "Double machina point generation.",
+            cost: new Decimal(1),
+            unlocked() {return hasUpgrade(x, 11)}
         }
     }
 })
