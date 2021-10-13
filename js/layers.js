@@ -35,7 +35,7 @@ addLayer("x", {
             title: "More Points.",
             description: "Double machina point generation.",
             cost: new Decimal(1),
-            unlocked() {return hasUpgrade(x, 11)}
+            unlocked() {return hasUpgrade("x", 11)}
         }
     }
 })
