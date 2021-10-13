@@ -70,9 +70,12 @@ addLayer("ach", {
     position: 0,
     startData() { return {
         unlocked: true,
+		points: new Decimal(0),
     }},
     color: "#6A0DAD",
-    row: "side", 
+    row: "side",
+    requires: new Decimal(0), 
+    resource: "achievements",
     achievements: {
         11: {
             name: "It's a start.",
