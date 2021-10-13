@@ -36,6 +36,18 @@ addLayer("x", {
             description: "Double machina point generation.",
             cost: new Decimal(1),
             unlocked() {return hasUpgrade("x", 11)}
+        },
+        13: {
+            title: "Wealthy.",
+            description: "Gain a boost to machina point production based off of your unspent 𝑥-Machina points.",
+            cost: new Decimal(2),
+            unlocked() {return hasUpgrade("x", 12)},
+            effect() {
+                return player.x.points.add(1.5).pow(0.75)
+            },
+            effectDisplay() {
+                return format(upgradeEffect(this.layer, this.id)) + "x"
+            }
         }
     }
 })
