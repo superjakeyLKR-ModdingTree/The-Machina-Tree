@@ -2,7 +2,7 @@ let modInfo = {
 	name: "The Machina Tree",
 	id: "TheMachinaTreeSaveID",
 	author: "SuperjakeyLKR",
-	pointsName: "points",
+	pointsName: "machina points",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
