@@ -15,6 +15,7 @@ addLayer("x", {
     exponent: 0.5, 
     gainMult() { 
         mult = new Decimal(1)
+        if (hasUpgrade("x", 14)) mult = mult.times(upgradeEffect("x", 14))
         return mult
     },
     gainExp() { 
@@ -43,7 +44,19 @@ addLayer("x", {
             cost: new Decimal(2),
             unlocked() {return hasUpgrade("x", 12)},
             effect() {
-                return player.x.points.add(1.5).pow(0.7)
+                return player.x.points.add(1).pow(0.7)
+            },
+            effectDisplay() {
+                return format(upgradeEffect(this.layer, this.id)) + "x"
+            }
+        },
+        14: {
+            title: "Never Enough.",
+            description: "Machina points boost 𝑥-Machina point gain slightly.",
+            cost: new Decimal(5),
+            unlocked() {return hasUpgrade("x", 13)},
+            effect() {
+                return player.points.add(1).pow(0.1)
             },
             effectDisplay() {
                 return format(upgradeEffect(this.layer, this.id)) + "x"
